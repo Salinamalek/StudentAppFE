@@ -1,0 +1,10 @@
+.searchbar-input {
+  all: unset;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.searchbar-input:focus {
+  border-bottom: 2px solid black;
+}
