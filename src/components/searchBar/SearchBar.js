@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import "./SearchBar.scss";
 
-const SearchBar = ({ search, setSearch }) => {
+const SearchBar = ({ setSearch }) => {
+  function handleChange(search) {
+    const searchVal = search.target.value;
+    setSearch(searchVal);
+  }
   return (
     <div className="searchBar">
       <input
-        type="text"
-        className="searchbar-input"
+        type="search"
+        onChange={handleChange}
+        className="searchBar_input"
         placeholder="Search..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
       />
     </div>
   );
